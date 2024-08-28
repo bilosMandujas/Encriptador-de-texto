@@ -1,48 +1,51 @@
-function encriptar(){
+function encriptar() {
     let texto = document.getElementById("texto").value;
     let tituloMensaje = document.getElementById("titulo-mensaje");
     let parrafo = document.getElementById("parrafo");
+    let muñeco = document.getElementById("muñeco");
 
     let textoCifrado = texto 
-                    .replace(/e/gi, "fall")
-                    .replace(/a/gi, "cool")
-                    .replace(/i/gi, "iper")
-                    .replace(/u/gi, "ultra")
-                    .replace(/o/gi, "mega")  
+                    .replace(/e/gi, "fll")
+                    .replace(/a/gi, "csl")
+                    .replace(/i/gi, "jpr")
+                    .replace(/u/gi, "ltr")
+                    .replace(/o/gi, "mgj")  
                     
-                    if(texto.length != 0){
+                    if (texto.length != 0) {
                         document.getElementById("texto").value = textoCifrado;
-                        tituloMensaje.textContent="texto encriptado con éxito";
+                        tituloMensaje.textContent = "Texto encriptado con éxito";
                         parrafo.textContent = "";
-                        Muñeco.src ="./img/perrito_letrero.jpg";
-                    }else{
-                        perrito.src= "./img/perrito_letrero.jpg";
-                        tituloMensaje.textContent = "Ningun mensaje fue encontrado";
+                        muñeco.src = "./img/encriptado.jpg";
+                      } else {
+                        muñeco.src = "./img/perrito.jpg";
+                        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
                         parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-                        alert("debes ingresar algun texto");
-                        }
+                        swal("Ooops!", "Debes ingresar un texto", "warning");
+                      }
                     }
 function desencriptar(){
     let texto = document.getElementById("texto").value;
+    let tituloMensaje = document.getElementById("titulo-mensaje");
+    let parrafo = document.getElementById("parrafo");
+    let muñeco = document.getElementById("muñeco");
 
     let textoCifrado = texto 
-    .replace(/fall/gi, "e")
-    .replace(/cool/gi, "a")
-    .replace(/iper/gi, "i")
-    .replace(/ultra/gi, "u")
-    .replace(/mega/gi, "o") 
+    .replace(/fll/gi, "e")
+    .replace(/csl/gi, "a")
+    .replace(/jpr/gi, "i")
+    .replace(/ltr/gi, "u")
+    .replace(/mgj/gi, "o") 
 
-    if(texto.length != 0){
+    if (texto.length != 0) {
         document.getElementById("texto").value = textoCifrado;
-        tituloMensaje.textContent= "texto desencriptado con éxito";
+        tituloMensaje.textContent = "Texto desencriptado con éxito";
         parrafo.textContent = "";
-        perrito_megafono.src ="./img/hombre_anuncio.jpg";
-} else{
-    perrito_letrero.src= "./img/perrito_letrero.jpg";
-    tituloMensaje.textContent = "Ningun mensaje fue encontrado";
-    parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    alert("debes ingresar algun texto");
-    }
-
-}
+        muñeco.src = "./img/desencriptado.jpg";
+      } else {
+        muñeco.src = "./img/muñeco.png";
+        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
+        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        swal("Ooops!", "Debes ingresar un texto", "warning");
+      }
+  }
 
